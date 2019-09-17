@@ -4,8 +4,8 @@ const cors = require('cors');
 const app = express();
 const port = 3006;
 
-app.use(express.static(__dirname + '/../public'));
-app.use('/:gameId', express.static('public'));
+app.use('/', express.static(__dirname + '/../public'));
+app.use('/:gameId', express.static(__dirname + '/../public'));
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
